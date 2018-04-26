@@ -1,0 +1,33 @@
+{% extends "../partial/content.html" %}
+{% block content %}
+<br><br>
+<div class="box-header">
+  <a href="/add" class="btn btn-sm btn-primary">Tambah</a>
+</div><br>
+{% include 'partial/pesan.html' %}
+<table class="table table-hoover table-striped">
+  <thead>
+    <tr>
+      <th class="tengah">No</th>
+      <th class="tengah">Username</th>
+      <th class="tengah">Email</th>
+      <th class="tengah">Password</th>
+      <th class="tengah">Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for res in userData  %}
+    <tr class="tengah">
+      <td>{{ forloop.counter }}</td>
+      <td>{{res.username}}</td>
+      <td>{{res.email}}</td>
+      <td>{{res.password}}</td>
+      <td>
+        <a href="edit/{{res.id_user}}" class="btn btn-sm btn-info"> Ubah</a>
+        <a href="delete/{{res.id_user}}" class="btn btn-sm btn-danger"> Hapus</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

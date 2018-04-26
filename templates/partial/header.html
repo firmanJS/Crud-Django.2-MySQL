@@ -1,0 +1,16 @@
+<!DOCTYPE html>{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block head_title %}{% endblock %}Halaman Utama {{title}}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style media="screen">
+      .tengah{
+        text-align: center;
+      }
+      .pesan{
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>

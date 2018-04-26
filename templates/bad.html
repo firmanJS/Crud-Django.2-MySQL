@@ -1,0 +1,18 @@
+{% extends "partial/content.html" %}
+{% block content %}
+<div class="col-md-12">
+  <div class="error-template">
+    <h1>
+      Oops!</h1>
+      <h2>
+        Error {{code}}</h2>
+        <div class="error-details">
+          {{pesan}}
+        </div>
+        <div class="error-actions">
+          <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+            Take Me Home </a>
+          </div>
+        </div>
+      </div>
+{% endblock %}
